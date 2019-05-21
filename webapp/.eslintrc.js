@@ -10,6 +10,7 @@ module.exports = {
 	rules: {
 		"react/jsx-indent": [ERROR, "tab"],
 		"react/jsx-indent-props": [ERROR, "tab"],
+		"react/jsx-one-expression-per-line": OFF,
 		"linebreak-style": OFF,
 	},
 	settings: {

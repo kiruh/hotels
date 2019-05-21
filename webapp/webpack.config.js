@@ -65,9 +65,6 @@ const config = {
 		],
 	},
 	resolve: {
-		alias: {
-			"~": path.resolve(ROOT, "./src"),
-		},
 		extensions: [".js", ".jsx"],
 	},
 	plugins: [
@@ -76,10 +73,6 @@ const config = {
 			chunkFilename: "[name].css",
 		}),
 		new FriendlyErrorsPlugin(),
-		new WebpackLivereloadPlugin({
-			appendScriptTag: true,
-			delay: 1,
-		}),
 	],
 	performance: { hints: false },
 	stats: {
@@ -88,5 +81,13 @@ const config = {
 		children: false,
 	},
 };
+
+if (isProd) {
+	config.plugins.push(
+		new WebpackLivereloadPlugin({
+			appendScriptTag: true,
+		}),
+	);
+}
 
 module.exports = config;

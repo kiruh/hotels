@@ -1,6 +1,18 @@
 import React from "react";
-import { Button } from "reactstrap";
+import { BrowserRouter, Route } from "react-router-dom";
 
-export default props => {
-	return <Button color="danger">Danger!</Button>;
-};
+import Home from "./Home";
+import Header from "./Header";
+import HotelPage from "./HotelPage";
+
+const App = () => (
+	<BrowserRouter>
+		<div className="container">
+			<Header />
+			<Route exact path="/" component={Home} />
+			<Route path="/hotels/:id" component={HotelPage} />
+		</div>
+	</BrowserRouter>
+);
+
+export default App;
