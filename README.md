@@ -1,5 +1,8 @@
-# hotels
-Spring Boot Rest Api + React.JS Demo Application
+# Sprint React Hotels Searcher
+
+This project was created as a homework at Plovdiv University.
+
+Spring Boot Rest Api + React.JS Demo Application.
 
 ## Run spring server
 
